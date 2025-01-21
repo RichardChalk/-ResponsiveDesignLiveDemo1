@@ -62,32 +62,15 @@ p {
     line-height: 1.5;
   }
 
-  /* Jag vill att bilden och texten ska nu ligger bredvid varann! */
+  /* Jag vill att bilden och texten ska nu ligger 'bredvid' varann! */
   .img-container {
-    /* 
-      Denna egenskap används för att bestämma hur elementet ska visas. 
-      I det här fallet säger vi att "img-container" ska visas som en tabell. 
-    */
-    display: table;
-    /* 
-      Detta sätter bredden på "img-container" till 100% av dess förälders bredd. 
-      Med andra ord kommer den att ta upp hela bredden på det element som omsluter det. 
-    */
+    display: flex;
     width: 100%;
   }
 
   .img-container img,
   .img-container p {
-    /* Här säger vi att både bilder och text ska visas som tabellceller. 
-       Detta innebär att de kommer att bete sig som celler i en tabell. 
-    */
-    display: table-cell;
-    /* 
-      Används för att justera vertikalt innehållet i en cell. 
-      Genom att sätta den till "middle" säger vi att innehållet 
-      ska vara centrerat vertikalt i sina respektive celler. 
-    */
-    vertical-align: middle;
+    flex: 1; /* Delar upp utrymmet lika mellan bilden och texten */
   }
 
   .img-container p {
