@@ -45,6 +45,15 @@ h1 {
   margin: 2rem 0 1.5rem;
 }
 
+/* Visa mobile H1 som default */
+.mobile {
+  display: inline;
+}
+.tablet,
+.desktop {
+  display: none;
+}
+
 h2 {
   color: #ddd;
   font-size: 1.5rem;
@@ -71,6 +80,16 @@ h2 {
 
   p {
     font-size: 1.25rem;
+  }
+
+  /* Visa tablet H1 som default */
+  @media (min-width: 768px) {
+    .mobile {
+      display: none;
+    }
+    .tablet {
+      display: inline;
+    }
   }
 }
 
@@ -114,5 +133,16 @@ h2 {
 
   .img-container p {
     text-align: left;
+  }
+
+  /* Visa tablet H1 som default */
+  @media (min-width: 1025px) {
+    .tablet,
+    .mobile {
+      display: none;
+    }
+    .desktop {
+      display: inline;
+    }
   }
 }
